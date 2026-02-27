@@ -6,6 +6,7 @@ pipeline {
         COURSE = "DevOps"
         FIELD = "IT"
         HOME = "/tmp/"
+        college = "sahyog"
     }
 
     stages {
@@ -19,6 +20,7 @@ pipeline {
         stage('Listing Directory') {
             steps{
                 sh 'ls ${HOME}'
+                echo "my college is ${college}"
             }
             
         }
