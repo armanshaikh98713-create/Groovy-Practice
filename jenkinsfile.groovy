@@ -30,7 +30,7 @@ pipeline {
                 //DEVELOPER KA CODE
                 // JENKINS ROOT DIRECTORY IS /var/lib/jenkins/workspace/<PIPE-NAME>/
             }
-
+         }
             stage('NGINX Server'){
                 steps{
                     sshagent(['nginx']) {
@@ -39,6 +39,6 @@ pipeline {
                 }
             }
             
-        }
+        
     }
 }
