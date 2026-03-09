@@ -34,7 +34,7 @@ pipeline {
             stage('NGINX Server'){
                 steps{
                     sshagent(['nginx']) {
-                        "ssh -o StrictHostKeyChecking=no ubuntu@13.235.133.31 'ls' "
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@13.235.133.31 'ls' "
                     }
                 }
             }
