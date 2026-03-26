@@ -26,7 +26,7 @@ pipeline {
         }
          stage('Pulling Code') {
             steps{
-                git branch: 'main', url: 'https://github.com/armanshaikh98713-create/university-website.git'
+                git branch: 'main', url: 'https://github.com/armanshaikh98713-create/demo6.git'
                 //DEVELOPER KA CODE
                 // JENKINS ROOT DIRECTORY IS /var/lib/jenkins/workspace/<PIPE-NAME>/
             }
