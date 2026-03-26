@@ -35,7 +35,7 @@ pipeline {
                 steps{
                     sshagent(['nginx']) {
                         sh "scp -o StrictHostKeyChecking=no * ubuntu@15.206.81.95:/tmp/CODE"
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@15.206.81.95 'mv /tmp/CODE/* /var/www/html/' "
+                        sh "ssh -o StrictHostKeyChecking=no ubuntu@15.206.81.95 'sudo mv /tmp/CODE/* /var/www/html/' "
                     }
                 }
             }
