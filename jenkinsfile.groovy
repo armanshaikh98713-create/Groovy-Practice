@@ -31,10 +31,11 @@ pipeline {
                 // JENKINS ROOT DIRECTORY IS /var/lib/jenkins/workspace/<PIPE-NAME>/
             }
          }
-            stage('NGINX Server'){
+            stage('Sending Code'){
                 steps{
                     sshagent(['nginx']) {
-                        sh "ssh -o StrictHostKeyChecking=no ubuntu@15.206.81.95 'ls' "
+                        sh "scp -o StrictHostKeyChecking=no * ubuntu@15.206.81.95:/tmp"
+                        // sh "scp -o StrictHostKeyChecking=no * ubuntu@15.206.81.95:/tmp"
                     }
                 }
             }
